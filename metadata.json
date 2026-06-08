@@ -1,0 +1,6 @@
+{
+  "name": "Cameroun Cultural Portal",
+  "description": "Web platform to promote local culture, present administrative and traditional authorities, and schedule events with member notifications.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,146 @@
+/**
+ * Custom CSS Stylesheet for CamHeritage
+ * 
+ * Preserves high-contrast layout, traditional colors, and polished
+ * Bootstrap elevations to convey cultural grandeur.
+ */
+
+/* Variable Definitions Root */
+:root {
+  --primary-color: #007A5E; /* Cam Green */
+  --accent-color: #FCD116;  /* Cam Yellow */
+  --danger-color: #CE1126;  /* Cam Red */
+  --body-font: 'Inter', sans-serif;
+  --title-font: 'Playfair Display', serif;
+}
+
+body {
+  font-family: var(--body-font);
+  color: #212529;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .display-font {
+  font-family: var(--title-font);
+}
+
+/* Custom Navbar hover links */
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--accent-color) !important;
+}
+
+/* Custom Slider Style */
+.cultural-slider-item {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.cultural-slider-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.75) 100%);
+}
+.carousel-caption-overlay {
+  max-width: 700px;
+  text-shadow: 1px 1px 12px rgba(0,0,0,0.8);
+}
+
+/* Subtle Notification Alert Hilite */
+.bg-light-yellow {
+  background-color: #fdfae6 !important;
+  transition: background-color 0.4s ease;
+}
+
+/* Hover Zoom Cultural Cards */
+.hover-card-zoom {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-card-zoom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+.card-scale-img {
+  transition: transform 0.5s ease;
+}
+.hover-card-zoom:hover .card-scale-img {
+  transform: scale(1.05);
+}
+
+/* Hover transitions on footer navigation */
+.hover-warning {
+  transition: color 0.15s ease;
+}
+.hover-warning:hover {
+  color: var(--accent-color) !important;
+}
+
+/* Admin Sidebar Styling Layout */
+.admin-sidebar {
+  background-color: #1a1e21;
+  min-height: calc(100vh - 100px);
+  color: #fff;
+}
+.admin-sidebar .nav-link {
+  color: rgba(255,255,255,0.75);
+  border-radius: 8px;
+  margin-bottom: 5px;
+  transition: all 0.2s ease;
+}
+.admin-sidebar .nav-link:hover,
+.admin-sidebar .nav-link.active {
+  background-color: var(--primary-color);
+  color: #fff !important;
+}
+
+/* Lightbox/Gallery overlay */
+.gallery-thumbnail {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 240px;
+}
+.gallery-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  text-align: center;
+}
+.gallery-thumbnail:hover .gallery-hover-overlay {
+  opacity: 1;
+}
+
+/* Status Badges styling */
+.badge-traditional {
+  background-color: var(--primary-color);
+  color: white;
+}
+.badge-administrative {
+  background-color: #34495e;
+  color: white;
+}
