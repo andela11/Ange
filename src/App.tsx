@@ -1,10 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import {
-  Calendar, MapPin, Plus, Trash2, Users, Image as ImageIcon,
-  AlertCircle, CheckCircle2, ArrowRight, ShieldCheck, Search,
-  Share2, Download, X, Loader as Loader2, Sparkles, Crown, Building2,
-  ChevronRight, TrendingUp, Info, Mail, Lock, User as UserIcon,
-} from 'lucide-react';
+import { Calendar, MapPin, Plus, Trash2, Users, Image as ImageIcon, CircleAlert as AlertCircle, CircleCheck as CheckCircle2, ArrowRight, ShieldCheck, Search, Share2, Download, X, Loader as Loader2, Sparkles, Crown, Building2, ChevronRight, TrendingUp, Info, Mail, Lock, User as UserIcon } from 'lucide-react';
 import { supabase, type Profile, type Evenement, type Autorite, type GalerieItem, type Notification } from './lib/supabase';
 import { translations } from './translations';
 import RegistrationsChart from './components/RegistrationsChart';
@@ -289,6 +284,9 @@ export default function App() {
         notifications={notifications} unreadCount={unreadCount}
         onMarkAllRead={handleMarkAllRead} onLogout={handleLogout}
       />
+
+      {/* Spacer for fixed header on non-home views */}
+      {currentView !== 'home' && <div className="h-20 md:h-24" />}
 
       {/* Toast */}
       {toast && (
