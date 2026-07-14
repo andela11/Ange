@@ -1,9 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import {
-  Sparkles, Bell, ChevronRight, Calendar, MapPin, User, Plus, Trash2,
-  LogOut, Users, Image as ImageIcon, AlertCircle, CheckCircle2,
-  ArrowRight, ShieldCheck, Info, Search, Share2, Download, X, Loader2,
-} from 'lucide-react';
+import { Sparkles, Bell, ChevronRight, Calendar, MapPin, User, Plus, Trash2, LogOut, Users, Image as ImageIcon, CircleAlert as AlertCircle, CircleCheck as CheckCircle2, ArrowRight, ShieldCheck, Info, Search, Share2, Download, X, Loader as Loader2 } from 'lucide-react';
 import { supabase, type Profile, type Evenement, type Autorite, type GalerieItem, type Notification } from './lib/supabase';
 import { translations } from './translations';
 import RegistrationsChart from './components/RegistrationsChart';
